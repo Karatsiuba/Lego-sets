@@ -1,16 +1,16 @@
 # LEGO-sets
 This is an interactive Power BI dashboard for exploring the evolution of LEGO sets over the past 50 years 📊
 
-## About My Project
+## 🧩 About My Project
 This project is my personal take on the story behind LEGO — not just as a toy, but as a cultural phenomenon. I wanted to explore how LEGO sets have changed over the past 50 years: the themes we loved, the complexity we faced, and how prices evolved. My goal was to build something interactive and insightful — not just for data nerds, but for collectors, casual fans, and curious minds alike.
 
-### 🎯 Project Goals
+### Project Goals
 - Visualize how LEGO themes have shifted over time  
 - Track changes in set sizes and pricing  
 - Explore the relationship between piece count and price  
 - Create an intuitive, interactive dashboard that makes data exploration fun and simple
 
-### 💼 Business Needs
+### Business Needs
 LEGO has grown into one of the most iconic toy brands in the world, with a massive catalog of sets spanning decades. By analyzing trends in themes, pricing, and build complexity, we can uncover valuable insights that speak to both nostalgic collectors and modern-day enthusiasts. This project aims to dive into LEGO’s rich history and uncover the key patterns that have shaped its evolution.
 
 The specific goals of this analysis include:
@@ -91,7 +91,7 @@ LEGO sets have become more detailed and expensive. Themes like Star Wars and Tec
 
 ---
 
-## 🧮 DAX Measures & Calculations
+## 📐 DAX Measures & Calculations
 
 All DAX measures were stored in a dedicated `Measure Table` using the "Enter Data" feature.
 
@@ -145,7 +145,7 @@ Max Price Filter = IF([Avg. Price] <= 'Max Price'[Max Price Value], 1, 0)
 ```
 </details>
 
-### 🧠 Dynamic Selection Measures
+### Dynamic Selection Measures
 
 <details>
 <summary>Selected Set</summary>
@@ -187,21 +187,37 @@ Selected Age = IF(HASONEVALUE(lego_sets[age]), MAX(lego_sets[age]), "-")
 ```
 </details>
 
+![dash_with_measure](https://github.com/user-attachments/assets/13ba62c5-8460-4642-8431-9ca38cfb6e1b)
+
 ---
 
 ## 🧮 Parameter Controls
 
+To enhance the flexibility of my analysis, I created a Max Price parameter in Power BI.
+This allows users to dynamically filter LEGO sets by maximum price, making it easier to explore products within a specific budget.
+
 <details>
 <summary>Max Price Parameter</summary>
 
-- **Type:** Numeric Range  
-- **Min:** 0  
-- **Max:** 850  
-- **Step:** 5  
-- **Default:** 850  
+**Steps to create the Max Price parameter:**
 
-Used to dynamically filter the table by max retail price.
+1. Go to the **Modeling** tab in Power BI  
+2. Click on **New Parameter → Numeric Range**
+
+**Parameter Configuration:**
+
+- **Name:** Max Price  
+- **Data Type:** Whole Number  
+- **Minimum Value:** 0  
+- **Maximum Value:** 850  
+- **Increment:** 5  
+- **Default Value:** 850  
+
+Once created, this parameter was linked to the price field in the dataset, allowing real-time updates to charts and tables based on the selected maximum price. It also connects seamlessly with card KPIs and visuals for dynamic filtering.
 </details>
+
+
+![dash_param](https://github.com/user-attachments/assets/d4e100ca-aed9-4293-aa16-729e2d63938d)
 
 ---
 
@@ -214,6 +230,8 @@ When hovering over a table row, users see a preview of the LEGO set.
 - Implemented with a separate report page (`Thumbnail`)  
 - Tooltip type set to report page  
 - Displays image from URL
+
+![dash_tooltip](https://github.com/user-attachments/assets/99325eb5-e2e1-4681-b1e5-0aff38dfe60d)
 
 ### Product Detail View
 
@@ -233,6 +251,9 @@ To provide deeper insights into set distributions, I added a `Set Explorer` page
 - Allows drill-down exploration to find patterns and theme popularity
 
 This page adds a powerful and intuitive breakdown tool for interactive storytelling.
+
+![Set_explorer](https://github.com/user-attachments/assets/ddfb04ae-f79f-4861-8133-71cb614c6414)
+
 
 ---
 
