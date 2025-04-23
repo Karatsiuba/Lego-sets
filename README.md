@@ -231,11 +231,6 @@ Displays the release year of the selected LEGO set.
 
 ![dash1](https://github.com/user-attachments/assets/6e950e6d-0b71-46d8-bb3a-1645b6f1f907)
 
-Parameter Controls
-<details> <summary>Max Price Parameter</summary>
-To enhance the flexibility of my analysis, I created a Max Price parameter in Power BI.
-This allows users to dynamically filter LEGO sets by maximum price, making it easier to explore products within a specific budget.
-
 ## Parameter Controls
 
 To enhance the flexibility of my analysis, I created a Max Price parameter in Power BI.
