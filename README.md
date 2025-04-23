@@ -37,3 +37,43 @@ Using Power BI, I built an interactive dashboard with slicers, custom tooltips, 
 🧠 Key Insights:
 Over the years, LEGO sets have become larger and more intricate, with standout themes like Star Wars and Technic continuing to shine — and when it comes to pricing, it’s not just about size, but also age range, branding, and theme.
 ![image](https://github.com/user-attachments/assets/6745830a-9e93-40bb-bf49-28207854d54c)
+
+
+
+
+
+Created a new conditional column called `Age Range`, which grouped sets into age-based categories:
+<details>
+<summary>Age Range</summary>
+
+- **Over** – for sets recommended for ages 18+  
+- **10 to 17** – for older children and teens  
+- **5 to 9** – for younger builders  
+- **1 to 4** – for toddler-friendly sets
+
+This made it easier to segment the data by age group in slicers and visuals.
+</details>
+
+---
+![Age_range](https://github.com/user-attachments/assets/d0a25fdd-92b8-4beb-9460-5bd14fe6c809)
+
+Created another conditional column named `Price Range`, to classify sets by cost using dollar signs:
+<details>
+<summary>Price Range</summary>
+
+- **$$$$$** – sets over $500  
+- **$$$$** – $100 to $500  
+- **$$$** – $50 to $100  
+- **$$** – $5 to $50  
+- **$** – under $5
+
+This allowed for quick filtering and intuitive comparison of set prices.
+</details>
+
+![Price_range](https://github.com/user-attachments/assets/58698606-cc5d-4570-9c76-99938a113e1d)
+
+
+
+
+![dash](https://github.com/user-attachments/assets/62a10471-8fd5-4087-989a-9d3d138e804c)
+
