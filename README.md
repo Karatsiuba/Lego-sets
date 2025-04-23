@@ -36,3 +36,4 @@ Using Power BI, I built an interactive dashboard with slicers, custom tooltips, 
 
 🧠 Key Insights:
 Over the years, LEGO sets have become larger and more intricate, with standout themes like Star Wars and Technic continuing to shine — and when it comes to pricing, it’s not just about size, but also age range, branding, and theme.
+![image](https://github.com/user-attachments/assets/6745830a-9e93-40bb-bf49-28207854d54c)
