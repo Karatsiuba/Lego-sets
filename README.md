@@ -86,10 +86,155 @@ This allowed for quick filtering and intuitive comparison of set prices.
 
 ![Price_range](https://github.com/user-attachments/assets/58698606-cc5d-4570-9c76-99938a113e1d)
 
+## DAX Measures & Calculations
+To keep everything organized, I created a dedicated Measure Table using the Enter Data option in Power BI and added all my DAX measures there. Below are the key calculations used across the dashboard:
+
+<details>
+<summary>Total Sets</summary>
+
+```DAX
+Total Sets = DISTINCTCOUNT(lego_sets[set_id])
+```
+
+Counts all unique LEGO sets, ensuring duplicates do not affect the result.
+</details>
+
+<details>
+<summary>Total Theme Groups</summary>
+
+```DAX
+Total Groups = DISTINCTCOUNT(lego_sets[themeGroup])
+```
+
+Calculates the number of distinct theme groups in the dataset.
+</details>
+
+<details>
+<summary>Average Age</summary>
+
+```DAX
+Avg. Age = AVERAGE(lego_sets[age])
+```
+
+Returns the average recommended age across all LEGO sets.
+</details>
+
+<details>
+<summary>Average Pieces</summary>
+
+```DAX
+Avg. Pieces = AVERAGE(lego_sets[pieces])
+```
+
+Calculates the average number of pieces per LEGO set.
+</details>
+
+<details>
+<summary>Average Price</summary>
+
+```DAX
+Avg. Price = AVERAGE(lego_sets[price])
+```
+
+Returns the average price of LEGO sets.
+</details>
+
+<details>
+<summary>Max Price Filter</summary>
+
+```DAX
+Max Price Filter = MAX('Max Price'[Max Price])
+```
+
+Returns the selected value from the Max Price table for filtering visuals.
+</details>
+
+### Dynamic Selection Measures
+
+<details>
+<summary>Selected Age</summary>
+
+```DAX
+Selected Age = 
+IF(
+  HASONEVALUE(lego_sets[age]),
+  MAX(lego_sets[age]),
+  "-"
+)
+```
+
+Displays the selected age, or "-" if multiple or none selected.
+</details>
+
+<details>
+<summary>Selected Pieces</summary>
+
+```DAX
+Selected Pieces = 
+IF(
+  HASONEVALUE(lego_sets[pieces]),
+  MAX(lego_sets[pieces]),
+  "-"
+)
+```
+
+Displays the selected piece count, or "-" if multiple or no values are selected.
+</details>
+
+<details>
+<summary>Selected Price</summary>
+
+```DAX
+Selected Price = 
+IF(
+  HASONEVALUE(lego_sets[price]),
+  MAX(lego_sets[price]),
+  "-"
+)
+```
+
+Displays the selected set’s price, or a placeholder.
+</details>
+
+<details>
+<summary>Selected Set</summary>
+
+```DAX
+Selected Set = 
+IF(
+  HASONEVALUE(lego_sets[name]),
+  MAX(lego_sets[name]),
+  "Select a Set"
+)
+```
+
+Returns the name of the selected LEGO set, or a default prompt.
+</details>
+
+<details>
+<summary>Selected Year</summary>
+
+```DAX
+Selected Year = 
+IF(
+  HASONEVALUE(lego_sets[year]),
+  MAX(lego_sets[year]),
+  "-"
+)
+```
+
+Displays the release year of the selected LEGO set.
+</details>
+
+---
+
+
+![dash1](https://github.com/user-attachments/assets/6e950e6d-0b71-46d8-bb3a-1645b6f1f907)
 
 
 
 
-![dash](https://github.com/user-attachments/assets/0cc18267-0a3c-4493-9144-e9e54b51fe2e)
+![dash2](https://github.com/user-attachments/assets/d4e100ca-aed9-4293-aa16-729e2d63938d)
+
 
 
