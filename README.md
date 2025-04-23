@@ -229,7 +229,8 @@ Displays the release year of the selected LEGO set.
 ---
 
 
-![dash1](https://github.com/user-attachments/assets/6e950e6d-0b71-46d8-bb3a-1645b6f1f907)
+![dash_with_measure](https://github.com/user-attachments/assets/13ba62c5-8460-4642-8431-9ca38cfb6e1b)
+
 
 ## Parameter Controls
 
@@ -257,7 +258,30 @@ Once created, this parameter was linked to the price field in the dataset, allow
 </details>
 
 
-![dash2](https://github.com/user-attachments/assets/d4e100ca-aed9-4293-aa16-729e2d63938d)
+![dash_param](https://github.com/user-attachments/assets/d4e100ca-aed9-4293-aa16-729e2d63938d)
+
+## Visual Enhancements
+
+To make the dashboard more interactive and visually engaging, I implemented **custom image tooltips** for LEGO sets.  
+When users hover over a row in the set table, a small product image pops up dynamically.
+
+<details>
+<summary>Image Tooltips for LEGO Sets</summary>
+
+To make the dashboard more interactive and visually engaging, I implemented **custom image tooltips** for LEGO sets.  
+When users hover over a row in the set table, a small product image pops up dynamically.
+
+This feature adds clarity and visual context, helping users instantly recognize each set without needing to click.
+
+### Implementation Steps:
+- Added a column to the dataset containing direct image URLs for each LEGO set
+- Dragged the image field into the **Tooltip** area of the table visual
+- Adjusted the tooltip settings to display images on hover without interfering with layout or navigation
+
+This subtle enhancement adds a polished, user-friendly experience that makes data exploration more enjoyable.
+</details>
+
+![dash_tooltip](https://github.com/user-attachments/assets/99325eb5-e2e1-4681-b1e5-0aff38dfe60d)
 
 
 
