@@ -18,11 +18,11 @@ LEGO has grown into one of the most iconic toy brands in the world, with a massi
 
 The specific goals of this analysis include:
 
-•Identifying trends in set size, complexity, and pricing
+• Identifying trends in set size, complexity, and pricing
 
-•Recognizing which themes and categories gained popularity over time
+• Recognizing which themes and categories gained popularity over time
 
-•Supporting data-driven decisions for inventory, marketing, and collection planning
+• Supporting data-driven decisions for inventory, marketing, and collection planning
 
 ### Approach & Insights
 🧼 Data Preparation:
@@ -47,7 +47,7 @@ Once the data was ready, I opened Power BI Desktop and used the “Get Data” f
 ![image](https://github.com/user-attachments/assets/6745830a-9e93-40bb-bf49-28207854d54c)
 
 #### Data Transformation in Power Query
-After importing the dataset into Power BI, I clicked "Transform Data" to open the Power Query Editor 🛠️.
+After importing the dataset into Power BI, I clicked "Transform Data" to open the Power Query Editor.
 
 Here’s what I did during this stage:
 
@@ -231,7 +231,35 @@ Displays the release year of the selected LEGO set.
 
 ![dash1](https://github.com/user-attachments/assets/6e950e6d-0b71-46d8-bb3a-1645b6f1f907)
 
+Parameter Controls
+<details> <summary>Max Price Parameter</summary>
+To enhance the flexibility of my analysis, I created a Max Price parameter in Power BI.
+This allows users to dynamically filter LEGO sets by maximum price, making it easier to explore products within a specific budget.
 
+## Parameter Controls
+
+To enhance the flexibility of my analysis, I created a Max Price parameter in Power BI.
+This allows users to dynamically filter LEGO sets by maximum price, making it easier to explore products within a specific budget.
+
+<details>
+<summary>Max Price Parameter</summary>
+
+**Steps to create the Max Price parameter:**
+
+1. Go to the **Modeling** tab in Power BI  
+2. Click on **New Parameter → Numeric Range**
+
+**Parameter Configuration:**
+
+- **Name:** Max Price  
+- **Data Type:** Whole Number  
+- **Minimum Value:** 0  
+- **Maximum Value:** 850  
+- **Increment:** 5  
+- **Default Value:** 850  
+
+Once created, this parameter was linked to the price field in the dataset, allowing real-time updates to charts and tables based on the selected maximum price. It also connects seamlessly with card KPIs and visuals for dynamic filtering.
+</details>
 
 
 ![dash2](https://github.com/user-attachments/assets/d4e100ca-aed9-4293-aa16-729e2d63938d)
