@@ -24,7 +24,7 @@ The specific goals of this analysis include:
 
 •Supporting data-driven decisions for inventory, marketing, and collection planning
 
-## Approach & Insights
+### Approach & Insights
 🧼 Data Preparation:
 The dataset — covering over 18,000 LEGO sets from 1970 to 2022 — was cleaned and structured to ensure reliable analysis. Missing values were handled, columns were standardized, and data types were adjusted where necessary.
 
@@ -36,13 +36,27 @@ Using Power BI, I built an interactive dashboard with slicers, custom tooltips, 
 
 🧠 Key Insights:
 Over the years, LEGO sets have become larger and more intricate, with standout themes like Star Wars and Technic continuing to shine — and when it comes to pricing, it’s not just about size, but also age range, branding, and theme.
+
+## Steps to Complete the LEGO Sets Project
+#### Data Acquisition
+I started by downloading the LEGO dataset from [Maven Analytics], which included information on over 18,000 sets. Before jumping into analysis, I reviewed the structure to make sure everything was clean, relevant, and ready for Power BI.
+
+#### Importing into Power BI
+Once the data was ready, I opened Power BI Desktop and used the “Get Data” feature to load the dataset. From there, I began shaping and transforming the data using Power Query — setting the stage for analysis and visualization.
+
 ![image](https://github.com/user-attachments/assets/6745830a-9e93-40bb-bf49-28207854d54c)
 
+#### Data Transformation in Power Query
+After importing the dataset into Power BI, I clicked "Transform Data" to open the Power Query Editor 🛠️.
 
+Here’s what I did during this stage:
 
+• Removed null values and unnecessary rows
 
+• Renamed columns for better readability
 
-Created a new conditional column called `Age Range`, which grouped sets into age-based categories:
+• Adjusted data types for accurate analysis
+•Created a new conditional column called `Age Range`, which grouped sets into age-based categories:
 <details>
 <summary>Age Range</summary>
 
@@ -57,7 +71,7 @@ This made it easier to segment the data by age group in slicers and visuals.
 ---
 ![Age_range](https://github.com/user-attachments/assets/d0a25fdd-92b8-4beb-9460-5bd14fe6c809)
 
-Created another conditional column named `Price Range`, to classify sets by cost using dollar signs:
+• Created another conditional column named `Price Range`, to classify sets by cost using dollar signs:
 <details>
 <summary>Price Range</summary>
 
@@ -75,5 +89,7 @@ This allowed for quick filtering and intuitive comparison of set prices.
 
 
 
-![dash](https://github.com/user-attachments/assets/62a10471-8fd5-4087-989a-9d3d138e804c)
+
+![dash](https://github.com/user-attachments/assets/0cc18267-0a3c-4493-9144-e9e54b51fe2e)
+
 
