@@ -1,4 +1,4 @@
-# LEGO-sets
+# LEGO-SETS
 This is an interactive Power BI dashboard for exploring the evolution of LEGO sets over the past 50 years 📊
 
 ## 🧩 About My Project
