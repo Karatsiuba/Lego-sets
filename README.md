@@ -1,93 +1,83 @@
 # LEGO-sets
 This is an interactive Power BI dashboard for exploring the evolution of LEGO sets over the past 50 years 📊
+
 ## About My Project
 This project is my personal take on the story behind LEGO — not just as a toy, but as a cultural phenomenon. I wanted to explore how LEGO sets have changed over the past 50 years: the themes we loved, the complexity we faced, and how prices evolved. My goal was to build something interactive and insightful — not just for data nerds, but for collectors, casual fans, and curious minds alike.
-#### 🎯 Project Goals
-The main goal was to turn a raw dataset into something that tells a story. I wanted to:
 
-• Visualize how LEGO themes have shifted over time
+### 🎯 Project Goals
+- Visualize how LEGO themes have shifted over time  
+- Track changes in set sizes and pricing  
+- Explore the relationship between piece count and price  
+- Create an intuitive, interactive dashboard that makes data exploration fun and simple
 
-• Track changes in set sizes and pricing
-
-• Explore the relationship between piece count and price
-
-• Create an intuitive, interactive dashboard that makes data exploration fun and simple
-
-#### 💼 Business Needs
-LEGO has grown into one of the most iconic toy brands in the world, with a massive catalog of sets spanning decades. By analyzing trends in themes, pricing, and build complexity, we can uncover valuable insights that speak to both nostalgic collectors and modern-day enthusiasts. This project aims to dive into LEGO’s rich history and uncover the key patterns that have shaped its evolution.
-
-The specific goals of this analysis include:
-
-• Identifying trends in set size, complexity, and pricing
-
-• Recognizing which themes and categories gained popularity over time
-
-• Supporting data-driven decisions for inventory, marketing, and collection planning
+### 💼 Business Needs
+LEGO has grown into one of the most iconic toy brands in the world. By analyzing trends in themes, pricing, and build complexity, this project uncovers valuable insights for nostalgic collectors and modern-day enthusiasts.
 
 ### Approach & Insights
-🧼 Data Preparation:
-The dataset — covering over 18,000 LEGO sets from 1970 to 2022 — was cleaned and structured to ensure reliable analysis. Missing values were handled, columns were standardized, and data types were adjusted where necessary.
+#### 🧼 Data Preparation
+The dataset — covering over 18,000 LEGO sets from 1970 to 2022 — was cleaned and structured in Power Query. Null values were removed, unnecessary columns were dropped, and types were corrected.
 
-🔎 Exploratory Analysis:
-I explored core metrics such as average piece count per set, theme popularity over time, pricing patterns, and the relationship between set size and cost. This phase helped shape the visuals and guide the story behind the data.
+#### 🔎 Exploratory Analysis
+Key metrics explored: average piece count, price distribution, theme popularity, and relationships between age recommendation and cost.
 
-📊 Dashboard Design:
-Using Power BI, I built an interactive dashboard with slicers, custom tooltips, navigation features, and decomposition trees. Each visual was designed to support intuitive exploration and highlight meaningful trends.
+#### 📊 Dashboard Design
+Power BI was used to build an interactive dashboard with:
+- Slicers for filtering by age range, theme, and price  
+- KPI cards displaying total sets, average price and pieces  
+- A detailed table of LEGO sets  
+- Custom tooltips showing thumbnails on hover  
+- A dedicated product detail section for each selected set
 
-🧠 Key Insights:
-Over the years, LEGO sets have become larger and more intricate, with standout themes like Star Wars and Technic continuing to shine — and when it comes to pricing, it’s not just about size, but also age range, branding, and theme.
-
-## Steps to Complete the LEGO Sets Project
-#### Data Acquisition
-I started by downloading the LEGO dataset from [Maven Analytics], which included information on over 18,000 sets. Before jumping into analysis, I reviewed the structure to make sure everything was clean, relevant, and ready for Power BI.
-
-#### Importing into Power BI
-Once the data was ready, I opened Power BI Desktop and used the “Get Data” feature to load the dataset. From there, I began shaping and transforming the data using Power Query — setting the stage for analysis and visualization.
-
-![image](https://github.com/user-attachments/assets/6745830a-9e93-40bb-bf49-28207854d54c)
-
-#### Data Transformation in Power Query
-After importing the dataset into Power BI, I clicked "Transform Data" to open the Power Query Editor.
-
-Here’s what I did during this stage:
-
-• Removed null values and unnecessary rows
-
-• Renamed columns for better readability
-
-• Adjusted data types for accurate analysis
-•Created a new conditional column called `Age Range`, which grouped sets into age-based categories:
-<details>
-<summary>Age Range</summary>
-
-- **Over** – for sets recommended for ages 18+  
-- **10 to 17** – for older children and teens  
-- **5 to 9** – for younger builders  
-- **1 to 4** – for toddler-friendly sets
-
-This made it easier to segment the data by age group in slicers and visuals.
-</details>
+#### 🧠 Key Insights
+LEGO sets have become more detailed and expensive. Themes like Star Wars and Technic remain dominant, and price is driven by more than just piece count.
 
 ---
-![Age_range](https://github.com/user-attachments/assets/d0a25fdd-92b8-4beb-9460-5bd14fe6c809)
 
-• Created another conditional column named `Price Range`, to classify sets by cost using dollar signs:
+## 📥 Steps to Complete the LEGO Sets Project
+
+### 1. Data Acquisition
+- Dataset downloaded from [Maven Analytics]
+- Over 18,000 LEGO sets
+- Structure reviewed before loading into Power BI
+
+### 2. Importing into Power BI
+- Used “Get Data” to load dataset  
+- Opened Power Query for cleaning and transformation
+
+### 3. Data Transformation in Power Query
+- Removed nulls and empty rows  
+- Renamed columns for readability  
+- Changed data types for `age` and `price`  
+- Created conditional columns:
+
 <details>
-<summary>Price Range</summary>
+<summary>📘 Age Range</summary>
 
-- **$$$$$** – sets over $500  
+- **Over** – 18+  
+- **10 to 17** – older children & teens  
+- **5 to 9** – younger builders  
+- **1 to 4** – toddlers  
+
+</details>
+
+<details>
+<summary>💲 Price Range</summary>
+
+- **$$$$$** – over $500  
 - **$$$$** – $100 to $500  
 - **$$$** – $50 to $100  
 - **$$** – $5 to $50  
-- **$** – under $5
+- **$** – under $5  
 
-This allowed for quick filtering and intuitive comparison of set prices.
 </details>
 
-![Price_range](https://github.com/user-attachments/assets/58698606-cc5d-4570-9c76-99938a113e1d)
+---
 
-## DAX Measures & Calculations
-To keep everything organized, I created a dedicated Measure Table using the Enter Data option in Power BI and added all my DAX measures there. Below are the key calculations used across the dashboard:
+## 🧮 DAX Measures & Calculations
+
+All DAX measures were stored in a dedicated `Measure Table` using the "Enter Data" feature.
+
+### Core Measures
 
 <details>
 <summary>Total Sets</summary>
@@ -95,8 +85,6 @@ To keep everything organized, I created a dedicated Measure Table using the Ente
 ```DAX
 Total Sets = DISTINCTCOUNT(lego_sets[set_id])
 ```
-
-Counts all unique LEGO sets, ensuring duplicates do not affect the result.
 </details>
 
 <details>
@@ -105,8 +93,6 @@ Counts all unique LEGO sets, ensuring duplicates do not affect the result.
 ```DAX
 Total Groups = DISTINCTCOUNT(lego_sets[themeGroup])
 ```
-
-Calculates the number of distinct theme groups in the dataset.
 </details>
 
 <details>
@@ -115,8 +101,6 @@ Calculates the number of distinct theme groups in the dataset.
 ```DAX
 Avg. Age = AVERAGE(lego_sets[age])
 ```
-
-Returns the average recommended age across all LEGO sets.
 </details>
 
 <details>
@@ -125,8 +109,6 @@ Returns the average recommended age across all LEGO sets.
 ```DAX
 Avg. Pieces = AVERAGE(lego_sets[pieces])
 ```
-
-Calculates the average number of pieces per LEGO set.
 </details>
 
 <details>
@@ -135,153 +117,115 @@ Calculates the average number of pieces per LEGO set.
 ```DAX
 Avg. Price = AVERAGE(lego_sets[price])
 ```
-
-Returns the average price of LEGO sets.
 </details>
 
 <details>
 <summary>Max Price Filter</summary>
 
 ```DAX
-Max Price Filter = MAX('Max Price'[Max Price])
+Max Price Filter = IF([Avg. Price] <= 'Max Price'[Max Price Value], 1, 0)
 ```
-
-Returns the selected value from the Max Price table for filtering visuals.
 </details>
 
-### Dynamic Selection Measures
+### 🧠 Dynamic Selection Measures
 
 <details>
-<summary>Selected Age</summary>
+<summary>Selected Set</summary>
 
 ```DAX
-Selected Age = 
-IF(
-  HASONEVALUE(lego_sets[age]),
-  MAX(lego_sets[age]),
-  "-"
-)
+Selected Set = IF(HASONEVALUE(lego_sets[name]), MAX(lego_sets[name]), "Select a Set")
 ```
-
-Displays the selected age, or "-" if multiple or none selected.
-</details>
-
-<details>
-<summary>Selected Pieces</summary>
-
-```DAX
-Selected Pieces = 
-IF(
-  HASONEVALUE(lego_sets[pieces]),
-  MAX(lego_sets[pieces]),
-  "-"
-)
-```
-
-Displays the selected piece count, or "-" if multiple or no values are selected.
 </details>
 
 <details>
 <summary>Selected Price</summary>
 
 ```DAX
-Selected Price = 
-IF(
-  HASONEVALUE(lego_sets[price]),
-  MAX(lego_sets[price]),
-  "-"
-)
+Selected Price = IF(HASONEVALUE(lego_sets[price]), MAX(lego_sets[price]), "-")
 ```
-
-Displays the selected set’s price, or a placeholder.
 </details>
 
 <details>
-<summary>Selected Set</summary>
+<summary>Selected Pieces</summary>
 
 ```DAX
-Selected Set = 
-IF(
-  HASONEVALUE(lego_sets[name]),
-  MAX(lego_sets[name]),
-  "Select a Set"
-)
+Selected Pieces = IF(HASONEVALUE(lego_sets[pieces]), MAX(lego_sets[pieces]), "-")
 ```
-
-Returns the name of the selected LEGO set, or a default prompt.
 </details>
 
 <details>
 <summary>Selected Year</summary>
 
 ```DAX
-Selected Year = 
-IF(
-  HASONEVALUE(lego_sets[year]),
-  MAX(lego_sets[year]),
-  "-"
-)
+Selected Year = IF(HASONEVALUE(lego_sets[year]), MAX(lego_sets[year]), "-")
 ```
+</details>
 
-Displays the release year of the selected LEGO set.
+<details>
+<summary>Selected Age</summary>
+
+```DAX
+Selected Age = IF(HASONEVALUE(lego_sets[age]), MAX(lego_sets[age]), "-")
+```
 </details>
 
 ---
 
-
-![dash_with_measure](https://github.com/user-attachments/assets/13ba62c5-8460-4642-8431-9ca38cfb6e1b)
-
-
-## Parameter Controls
-
-To enhance the flexibility of my analysis, I created a Max Price parameter in Power BI.
-This allows users to dynamically filter LEGO sets by maximum price, making it easier to explore products within a specific budget.
+## 🧮 Parameter Controls
 
 <details>
 <summary>Max Price Parameter</summary>
 
-**Steps to create the Max Price parameter:**
+- **Type:** Numeric Range  
+- **Min:** 0  
+- **Max:** 850  
+- **Step:** 5  
+- **Default:** 850  
 
-1. Go to the **Modeling** tab in Power BI  
-2. Click on **New Parameter → Numeric Range**
-
-**Parameter Configuration:**
-
-- **Name:** Max Price  
-- **Data Type:** Whole Number  
-- **Minimum Value:** 0  
-- **Maximum Value:** 850  
-- **Increment:** 5  
-- **Default Value:** 850  
-
-Once created, this parameter was linked to the price field in the dataset, allowing real-time updates to charts and tables based on the selected maximum price. It also connects seamlessly with card KPIs and visuals for dynamic filtering.
+Used to dynamically filter the table by max retail price.
 </details>
 
+---
 
-![dash_param](https://github.com/user-attachments/assets/d4e100ca-aed9-4293-aa16-729e2d63938d)
+## ✨ Visual Enhancements
 
-## Visual Enhancements
+### Custom Image Tooltips
 
-To make the dashboard more interactive and visually engaging, I implemented **custom image tooltips** for LEGO sets.  
-When users hover over a row in the set table, a small product image pops up dynamically.
+When hovering over a table row, users see a preview of the LEGO set.
 
-<details>
-<summary>Image Tooltips for LEGO Sets</summary>
+- Implemented with a separate report page (`Thumbnail`)  
+- Tooltip type set to report page  
+- Displays image from URL
 
-To make the dashboard more interactive and visually engaging, I implemented **custom image tooltips** for LEGO sets.  
-When users hover over a row in the set table, a small product image pops up dynamically.
+### Product Detail View
 
-This feature adds clarity and visual context, helping users instantly recognize each set without needing to click.
+- A dynamic card updates when a set is selected  
+- Shows: image, name, price, year, pieces, age  
+- Uses `HASONEVALUE()` DAX logic to avoid incorrect aggregation when multiple sets are selected
 
-### Implementation Steps:
-- Added a column to the dataset containing direct image URLs for each LEGO set
-- Dragged the image field into the **Tooltip** area of the table visual
-- Adjusted the tooltip settings to display images on hover without interfering with layout or navigation
+---
 
-This subtle enhancement adds a polished, user-friendly experience that makes data exploration more enjoyable.
-</details>
+## 📈 Set Explorer (Decomposition Tree)
 
-![dash_tooltip](https://github.com/user-attachments/assets/99325eb5-e2e1-4681-b1e5-0aff38dfe60d)
+To provide deeper insights into set distributions, I added a `Set Explorer` page.
 
+- Uses the **Decomposition Tree** visual  
+- Explains `Total Sets` by:
+  - Category → Theme Group → Theme → Name
+- Allows drill-down exploration to find patterns and theme popularity
 
+This page adds a powerful and intuitive breakdown tool for interactive storytelling.
 
+---
+
+## 🔁 Navigation Features
+
+- Buttons allow seamless navigation between pages (`Main`, `Set Explorer`)  
+- “Reset Filters” uses bookmarks to clear slicers and reset parameters  
+- Interactive cards and slicers give full control over analysis
+
+---
+
+### Final Thoughts
+
+This dashboard is more than a data viz — it’s a playful and powerful way to explore decades of creativity. Whether you're a LEGO fan or a BI pro, it’s proof that even bricks can tell stories.
