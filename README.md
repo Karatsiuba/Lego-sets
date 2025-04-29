@@ -1,270 +1,63 @@
-# LEGO-SETS
-This is an interactive Power BI dashboard for exploring the evolution of LEGO sets over the past 50 years 📊
+Так! Це якраз той момент, коли можна додати вогню в твій дашборд і зробити його ще більш захопливим і глибоким для користувача 🧱🔥 Ось 7 ідей для нових сторінок/графіків/інтерактиву, які чудово впишуться в тему еволюції LEGO за 50 років:
 
-## 🧩 About My Project
-This project is my personal take on the story behind LEGO — not just as a toy, but as a cultural phenomenon. I wanted to explore how LEGO sets have changed over the past 50 years: the themes we loved, the complexity we faced, and how prices evolved. My goal was to build something interactive and insightful — not just for data nerds, but for collectors, casual fans, and curious minds alike.
+🗓️ 1. Тренди по роках: "LEGO Over Time"
+Візуалізація: Лінійний графік
 
-### Project Goals
-- Visualize how LEGO themes have shifted over time  
-- Track changes in set sizes and pricing  
-- Explore the relationship between piece count and price  
-- Create an intuitive, interactive dashboard that makes data exploration fun and simple
+📈 Кількість нових наборів на рік
 
-### Business Needs
-LEGO has grown into one of the most iconic toy brands in the world, with a massive catalog of sets spanning decades. By analyzing trends in themes, pricing, and build complexity, we can uncover valuable insights that speak to both nostalgic collectors and modern-day enthusiasts. This project aims to dive into LEGO’s rich history and uncover the key patterns that have shaped its evolution.
+🧩 Середня кількість деталей у наборах по роках
 
-The specific goals of this analysis include:
+💸 Середня ціна набору за рік
 
-- Identifying trends in set size, complexity, and pricing
-- Recognizing which themes and categories gained popularity over time
-- Supporting data-driven decisions for inventory, marketing, and collection planning
+Це дасть змогу побачити: коли LEGO стали більшими, дорожчими, популярнішими.
 
-### Approach & Insights
-#### 🧼 Data Preparation
-The dataset — covering over 18,000 LEGO sets from 1970 to 2022 — was cleaned and structured in Power Query. Null values were removed, unnecessary columns were dropped, and types were corrected.
+🧠 2. Еволюція складності: Age Range Over Time
+Візуалізація: Лінійний або стовпчиковий графік + фільтр за темами
 
-#### 🔎 Exploratory Analysis
-Key metrics explored: average piece count, price distribution, theme popularity, and relationships between age recommendation and cost.
+Як змінювалась мінімальна рекомендована вікова категорія
 
-#### 📊 Dashboard Design
-Power BI was used to build an interactive dashboard with:
-- Slicers for filtering by age range, theme, and price  
-- KPI cards displaying total sets, average price and pieces  
-- A detailed table of LEGO sets  
-- Custom tooltips showing thumbnails on hover  
-- A dedicated product detail section for each selected set
+Наприклад, порівняй розвиток наборів для дітей 5+ проти наборів 18+ (Icons, Star Wars UCS тощо).
 
-#### 🧠 Key Insights
-LEGO sets have become more detailed and expensive. Themes like Star Wars and Technic remain dominant, and price is driven by more than just piece count.
+🌍 3. Групи тем у часі: Theme Group Evolution
+Візуалізація: Area Chart або 100% stacked
 
----
+Які групи тем домінували в різні десятиліття (наприклад, Licensed, Classic, Technic)
 
-## 📥 Steps to Complete the LEGO Sets Project
+Це покаже, як із 90-х почався бум ліцензій (Star Wars, Marvel) або як Technic еволюціонував.
 
-### 1. Data Acquisition
-- Dataset downloaded from [Maven Analytics]
-- Over 18,000 LEGO sets
-- Structure reviewed before loading into Power BI
+🎭 4. Найпопулярніші теми в кожне десятиліття
+Візуалізація: Bar Chart race або heatmap
 
-### 2. Importing into Power BI
-- Used “Get Data” to load dataset  
-- Opened Power Query for cleaning and transformation
+ТОП-5 тем 1970-х, 1980-х, ..., 2020-х
 
-![load](https://github.com/user-attachments/assets/6745830a-9e93-40bb-bf49-28207854d54c)
+Дуже крута візуалізація для динаміки. Наприклад: у 1980-х — Classic Space, у 2000-х — Bionicle, у 2020-х — Star Wars.
 
-### 3. Data Transformation in Power Query
-- Removed nulls and empty rows  
-- Renamed columns for readability  
-- Changed data types for `age` and `price`
-- Created a new conditional column called `Age Range`, which grouped sets into age-based categories:
+🏗️ 5. Наймасштабніші набори: Big Builds Gallery
+Візуалізація: Картки з фото (image tooltip), фільтр за деталями або ціною
 
-  <details>
-  <summary>Age Range</summary>
+Вивід: ТОП-10 наборів за кількістю деталей або ціною
 
-  - **Over** – for sets recommended for ages 18+  
-  - **10 to 17** – for older children and teens  
-  - **5 to 9** – for younger builders  
-  - **1 to 4** – for toddler-friendly sets
+З автоматичною підказкою (tooltip) — відображення фото, року випуску, ціни, кількості деталей.
 
-  </details>
+🧒 6. Сет для кожного віку: “LEGO For You”
+Візуалізація: Випадаючий список (slicer) по віку + таблиця рекомендованих наборів
 
-  This made it easier to segment the data by age group in slicers and visuals.
+Вибери свій вік — отримай рекомендації: прості, середні або складні
 
-![Age_range](https://github.com/user-attachments/assets/d0a25fdd-92b8-4beb-9460-5bd14fe6c809)
+Корисний інструмент, особливо якщо інтегрувати з ціною чи темою.
 
-- Created another conditional column named `Price Range`, to classify sets by cost using dollar signs:
-  
-  <details>
-  <summary>Price Range</summary>
-  
-  - **$$$$$** – sets over $500  
-  - **$$$$** – $100 to $500  
-  - **$$$** – $50 to $100  
-  - **$$** – $5 to $50  
-  - **$** – under $5
-  
-  </details>
+🏆 7. Нагороди або milestones LEGO
+Візуалізація: Timeline + KPI Indicators
 
-  This allowed for quick filtering and intuitive comparison of set prices.
+Вивід важливих років:
 
-![Price_range](https://github.com/user-attachments/assets/58698606-cc5d-4570-9c76-99938a113e1d)  
+1-й набір з понад 5000 деталей
 
----
+перший UCS-набір
 
-## 📐 DAX Measures & Calculations
+вихід Technic, Star Wars, Modular
 
-All DAX measures were stored in a dedicated `Measure Table` using the "Enter Data" feature.
+Ця сторінка — як "історія LEGO в ключових подіях".
 
-### Core Measures
-
-<details>
-<summary>Total Sets</summary>
-
-```DAX
-Total Sets = DISTINCTCOUNT(lego_sets[set_id])
-```
-</details>
-
-<details>
-<summary>Total Theme Groups</summary>
-
-```DAX
-Total Groups = DISTINCTCOUNT(lego_sets[themeGroup])
-```
-</details>
-
-<details>
-<summary>Average Age</summary>
-
-```DAX
-Avg. Age = AVERAGE(lego_sets[age])
-```
-</details>
-
-<details>
-<summary>Average Pieces</summary>
-
-```DAX
-Avg. Pieces = AVERAGE(lego_sets[pieces])
-```
-</details>
-
-<details>
-<summary>Average Price</summary>
-
-```DAX
-Avg. Price = AVERAGE(lego_sets[price])
-```
-</details>
-
-<details>
-<summary>Max Price Filter</summary>
-
-```DAX
-Max Price Filter = IF([Avg. Price] <= 'Max Price'[Max Price Value], 1, 0)
-```
-</details>
-
-### Dynamic Selection Measures
-
-<details>
-<summary>Selected Set</summary>
-
-```DAX
-Selected Set = IF(HASONEVALUE(lego_sets[name]), MAX(lego_sets[name]), "Select a Set")
-```
-</details>
-
-<details>
-<summary>Selected Price</summary>
-
-```DAX
-Selected Price = IF(HASONEVALUE(lego_sets[price]), MAX(lego_sets[price]), "-")
-```
-</details>
-
-<details>
-<summary>Selected Pieces</summary>
-
-```DAX
-Selected Pieces = IF(HASONEVALUE(lego_sets[pieces]), MAX(lego_sets[pieces]), "-")
-```
-</details>
-
-<details>
-<summary>Selected Year</summary>
-
-```DAX
-Selected Year = IF(HASONEVALUE(lego_sets[year]), MAX(lego_sets[year]), "-")
-```
-</details>
-
-<details>
-<summary>Selected Age</summary>
-
-```DAX
-Selected Age = IF(HASONEVALUE(lego_sets[age]), MAX(lego_sets[age]), "-")
-```
-</details>
-
-![dash_with_measure](https://github.com/user-attachments/assets/13ba62c5-8460-4642-8431-9ca38cfb6e1b)
-
----
-
-## 🧮 Parameter Controls
-
-To enhance the flexibility of my analysis, I created a Max Price parameter in Power BI.
-This allows users to dynamically filter LEGO sets by maximum price, making it easier to explore products within a specific budget.
-
-<details>
-<summary>Max Price Parameter</summary>
-
-**Steps to create the Max Price parameter:**
-
-1. Go to the **Modeling** tab in Power BI  
-2. Click on **New Parameter → Numeric Range**
-
-**Parameter Configuration:**
-
-- **Name:** Max Price  
-- **Data Type:** Whole Number  
-- **Minimum Value:** 0  
-- **Maximum Value:** 850  
-- **Increment:** 5  
-- **Default Value:** 850  
-
-Once created, this parameter was linked to the price field in the dataset, allowing real-time updates to charts and tables based on the selected maximum price. It also connects seamlessly with card KPIs and visuals for dynamic filtering.
-</details>
-
-
-![dash_param](https://github.com/user-attachments/assets/d4e100ca-aed9-4293-aa16-729e2d63938d)
-
----
-
-## ✨ Visual Enhancements
-
-### Custom Image Tooltips
-
-When hovering over a table row, users see a preview of the LEGO set.
-
-- Implemented with a separate report page (`Thumbnail`)  
-- Tooltip type set to report page  
-- Displays image from URL
-
-![dash_tooltip](https://github.com/user-attachments/assets/99325eb5-e2e1-4681-b1e5-0aff38dfe60d)
-
-### Product Detail View
-
-- A dynamic card updates when a set is selected  
-- Shows: image, name, price, year, pieces, age  
-- Uses `HASONEVALUE()` DAX logic to avoid incorrect aggregation when multiple sets are selected
-
----
-
-## 📈 Set Explorer (Decomposition Tree)
-
-To provide deeper insights into set distributions, I added a `Set Explorer` page.
-
-- Uses the **Decomposition Tree** visual  
-- Explains `Total Sets` by:
-  - Category → Theme Group → Theme → Name
-- Allows drill-down exploration to find patterns and theme popularity
-
-This page adds a powerful and intuitive breakdown tool for interactive storytelling.
-
-![Set_explorer](https://github.com/user-attachments/assets/ddfb04ae-f79f-4861-8133-71cb614c6414)
-
-
----
-
-## 🔁 Navigation Features
-
-- Buttons allow seamless navigation between pages (`Main`, `Set Explorer`)  
-- “Reset Filters” uses bookmarks to clear slicers and reset parameters  
-- Interactive cards and slicers give full control over analysis
-
----
-
-### Final Thoughts
-
-This dashboard is more than a data viz — it’s a playful and powerful way to explore decades of creativity. Whether you're a LEGO fan or a BI pro, it’s proof that even bricks can tell stories.
+Хочеш — можу допомогти реалізувати одну з цих сторінок прямо зараз. Просто обери, яка ідея подобається найбільше ❤️
+Або скажи, якщо хочеш щось схоже, але з twist’ом.
