@@ -2,7 +2,7 @@
 This is an interactive Power BI dashboard for exploring the evolution of LEGO sets over the past 50 years 📊
 
 ## 🧩 About My Project
-This project is my personal take on the story behind LEGO — not just as a toy, but as a cultural phenomenon. I wanted to explore how LEGO sets have changed over the past 50 years: the themes we loved, the complexity we faced, and how prices evolved. My goal was to build something interactive and insightful — not just for data nerds, but for collectors, casual fans, and curious minds alike.
+This project is my personal take on the story behind LEGO - not just as a toy, but as a cultural phenomenon. I wanted to explore how LEGO sets have changed over the past 50 years: the themes we loved, the complexity we faced, and how prices evolved. My goal was to build something interactive and insightful - not just for data nerds, but for collectors, casual fans, and curious minds alike.
 
 ### Project Goals
 - Visualize how LEGO themes have shifted over time  
@@ -21,7 +21,7 @@ The specific goals of this analysis include:
 
 ### Approach & Insights
 #### 🧼 Data Preparation
-The dataset — covering over 18,000 LEGO sets from 1970 to 2022 — was cleaned and structured in Power Query. Null values were removed, unnecessary columns were dropped, and types were corrected.
+The dataset - covering over 18,000 LEGO sets from 1970 to 2022 - was cleaned and structured in Power Query. Null values were removed, unnecessary columns were dropped, and types were corrected.
 
 #### 🔎 Exploratory Analysis
 Key metrics explored: average piece count, price distribution, theme popularity, and relationships between age recommendation and cost.
@@ -267,4 +267,4 @@ This page adds a powerful and intuitive breakdown tool for interactive storytell
 
 ### Final Thoughts
 
-This dashboard is more than a data viz — it’s a playful and powerful way to explore decades of creativity. Whether you're a LEGO fan or a BI pro, it’s proof that even bricks can tell stories.
+This dashboard is more than a data viz - it’s a playful and powerful way to explore decades of creativity. Whether you're a LEGO fan or a BI pro, it’s proof that even bricks can tell stories.
